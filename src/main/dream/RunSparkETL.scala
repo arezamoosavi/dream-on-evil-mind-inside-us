@@ -25,9 +25,15 @@ object Pipeline {
       .option("header", "true")
       .option("encoding", "UTF-16")
       .option("charset", "UTF-16")
-      .load("sourceS3path")
+      .load("src/main/resources/sb_utf16.csv")
+      .withColumn("Date", $"Date".cast("timestamp"))
+      .withColumn("ClosingDate", $"ClosingDate".cast("timestamp"))
+      .withColumn("SettlementDate", $"SettlementDate".cast("timestamp"))
+      .withColumn("LastUpdated", $"LastUpdated".cast("timestamp"))
 
     df.printSchema()
     df.show(10)
+
+    
   }
 }

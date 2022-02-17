@@ -48,6 +48,14 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.cloud.spark/spark-bigquery-with-dependencies -->
+        <dependency>
+            <groupId>com.google.cloud.spark</groupId>
+            <artifactId>spark-bigquery-with-dependencies_2.12</artifactId>
+            <version>0.23.2</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
     <repositories>
         <repository>
